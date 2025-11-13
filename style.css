@@ -1,65 +1,49 @@
-html, body {
+body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
   overflow: hidden;
-  font-family: "Comic Sans MS", "Poppins", sans-serif;
-  background: linear-gradient(135deg, #002855, #0d3b66);
-}
-
-/* Confetti canvas stays in the background */
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* The main content container is centered */
-.container {
-  position: relative;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  flex-direction: column;
 }
 
-/* Text and button styling */
+.container {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
 h1 {
   font-size: 3em;
-  color: #EAAA00;
-  text-shadow: 0 0 20px #fff, 0 0 40px #EAAA00;
+  color: #ff1493;
+  text-shadow: 0 0 20px #fff, 0 0 30px #ff69b4;
   animation: glow 2s ease-in-out infinite alternate;
-  margin-bottom: 20px;
 }
 
 @keyframes glow {
-  from { text-shadow: 0 0 10px #fff, 0 0 30px #EAAA00; }
-  to { text-shadow: 0 0 20px #fff, 0 0 50px #FFD700; }
+  from { text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4; }
+  to { text-shadow: 0 0 30px #fff, 0 0 40px #ff1493; }
 }
 
 button {
-  background-color: #EAAA00;
-  color: #002855;
+  background-color: #ff69b4;
+  color: white;
   border: none;
   border-radius: 30px;
   padding: 15px 25px;
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 1.2em;
   cursor: pointer;
-  box-shadow: 0 0 10px #FFD700;
+  box-shadow: 0 0 10px #fff;
   transition: transform 0.2s, background 0.3s;
 }
 
 button:hover {
-  background-color: #FFD700;
+  background-color: #ff85c1;
   transform: scale(1.1);
 }
 
@@ -67,11 +51,20 @@ button:hover {
   margin-top: 30px;
   font-size: 1.3em;
   color: #fff;
-  text-shadow: 0 0 10px #EAAA00;
+  text-shadow: 0 0 10px #ff1493;
   opacity: 0;
   transition: opacity 1.5s ease;
 }
 
 #message.show {
   opacity: 1;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
