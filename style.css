@@ -17,22 +17,11 @@ body {
   position: relative;
 }
 
-/* h1 {
+h1 {
   font-size: 3em;
   color: #EAAA00;
   text-shadow: 0 0 20px #fff, 0 0 40px #EAAA00;
   animation: glow 2s ease-in-out infinite alternate;
-} */
-
-h1 {
-  font-size: clamp(2em, 6vw, 3em); 
-  color: #EAAA00;
-  text-shadow: 0 0 20px #FFD700, 0 0 40px #EAAA00;
-  animation: glow 2s ease-in-out infinite alternate;
-  margin: 0 10px 20px 10px; 
-  line-height: 1.2;
-  text-align: center;
-  word-wrap: break-word;
 }
 
 @keyframes glow {
