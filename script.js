@@ -10,7 +10,7 @@ const confettiCount = 150;
 const confetti = [];
 
 function randomColor() {
-  const colors = ['#ff69b4', '#ffb6c1', '#fffacd', '#ffa07a', '#ffd700'];
+  const colors = ['#002855', '#EAAA00', '#FFD700', '#ffffff'];
   return colors[Math.floor(Math.random() * colors.length)];
 }
 
